@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <title>TenTen - VendingMachine</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <style type="text/css">
+    .create-btn,.back-to-dashboard{ float:right; position:relative;margin-bottom:10px; }
+    .back-to-dashboard{ margin-top:-40px; }
+    .main-wrapper{ margin-top:20px; }
+    .create-form{ margin-top:50px; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
+  <script src="http://localhost/local/tenten/vendingmachine/controllers/mainCtrl.js"></script>
+  <script src="http://localhost/local/tenten/vendingmachine/services/vendingService.js"></script>
+  <script src="http://localhost/local/tenten/vendingmachine/app.js"></script>  
+</head>
+<body ng-app="vendingApp">	
+	<div ng-controller="mainController" class="container main-wrapper">
+    <div ng-view></div>
+</body>
+</html>

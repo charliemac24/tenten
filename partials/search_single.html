@@ -1,0 +1,11 @@
+<!-- should've rename this to view_single.html -->
+<!-- should've created a delete buton on this page -->
+
+<h2>Vending Machine Detail</h2>
+<a href="{{base_url}}/#!/" class="btn btn-primary btn-md back-to-dashboard">Back to Dashboard</a>
+<hr/>
+<div ng-show="view_error_notification" class="error-notification ng-hide alert alert-danger">{{ errorMessage }}</div>
+<p><h3>ID# {{ vm.id }}</h3></p>
+<p><h3>Latitude: {{ vm.attributes.latitude }}</h3></p>
+<p><h3>Longitude: {{ vm.attributes.longitude }}</h3></p>
+

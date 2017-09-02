@@ -1,0 +1,20 @@
+<h2>Create Vending Machines</h2>
+<a href="{{base_url}}/#!/" class="btn btn-primary btn-md back-to-dashboard">Back to Dashboard</a>
+<hr/>
+<div ng-show="create_success_notification" class="success-notification ng-hide alert alert-success">{{ successMessage }}</div>
+<div ng-show="create_error_notification" class="error-notification ng-hide alert alert-danger">{{ errorMessage }}</div>
+<form ng-submit="submitVending()" class="create-form"> 
+
+	<div class="form-group">
+		<input type="text" name="latitude" ng-model="vendingData.latitude" placeholder="Latitude">
+	</div>
+
+	<div class="form-group">
+		<input type="text" name="longitude" ng-model="vendingData.longitude" placeholder="Longitude">
+	</div>
+
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Create</button>
+	</div>
+
+</form>

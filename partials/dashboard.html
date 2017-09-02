@@ -1,0 +1,31 @@
+<h2>Dashboard</h2>
+<a href="{{base_url}}/#!/create" class="btn btn-primary btn-md create-btn">Create Vending Machine</a>
+<div class="lists">
+    <table class="table">
+    <thead>
+        <tr>
+        	<th>ID#</th>
+        	<th>Latitude</th>
+        	<th>Longitude</th>
+        	<th>Actions</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="vending_machine in vending_machines" class="{{ vending_machine.id }}">
+    	<td>{{ vending_machine.id }}</td>
+    	<td>{{ vending_machine.attributes.latitude }}</td>
+    	<td>{{ vending_machine.attributes.longitude }}</td>
+    	<td><a href="{{base_url}}/#!/{{vending_machine.id}}" class="btn btn-primary">View</a>&nbsp;<a href="{{base_url}}/#!/" ng-click="deleteVending(vending_machine.id)" class="btn btn-danger">Delete</a></td>
+    </tr>
+    </table>
+	
+</div>
+
+<div ng-show="error_notification" class="error-notification ng-hide alert alert-danger">
+<strong></strong>
+<p>{{ errorMessage }}</p>
+</div>
+
+<div ng-show="success_notification" class="success-notification ng-hide alert alert-success">
+<strong></strong>
+<p>{{ successMessage }}</p>
+</div>
